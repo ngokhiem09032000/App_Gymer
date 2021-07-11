@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:titleTextColor="#000"
+        android:background="#707DC6"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <Button
+            android:id="@+id/quaylai"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            ></Button>
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHI TIẾT HƯỚNG DẪN TẬP"
+        android:textColor="#95CA57"
+        android:layout_below="@+id/toolbar1"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        ></TextView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        >
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/video1"
+            android:adjustViewBounds="true"
+            ></VideoView>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Độ Khó :"
+            >
+        </TextView>
+        <Spinner
+            android:layout_marginLeft="20dp"
+            android:id="@+id/spnCategory"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/solan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Số lần tập: "
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:textColor="#354185"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/tenbt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên bài tập: "
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:textColor="#354185"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung hướng dẫn tập: "
+        android:textSize="30sp"
+        android:textColor="#71B857"
+        android:layout_margin="10dp"></TextView>
+    <TextView
+        android:id="@+id/noidung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung hướng dẫn tập:"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_margin="10dp"></TextView>
+</LinearLayout>

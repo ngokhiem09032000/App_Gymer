@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#CFE1E8"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        app:titleTextColor="#000"
+        android:background="#CF8C29"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <Button
+            android:id="@+id/quaylai2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            ></Button>
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHI TIẾT SẢN PHẨM"
+        android:textColor="#95CA57"
+        android:layout_below="@+id/toolbar1"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="30dp"></TextView>
+    <ImageView
+        android:id="@+id/anhsp"
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:background="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/tt"
+        android:layout_alignParentStart="true"
+        ></ImageView>
+    <LinearLayout
+        android:layout_below="@+id/tt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên sản phẩm"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/tensp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên sản phẩm"
+            android:textColor="#4F799A"
+            android:textSize="10dp"
+            android:layout_marginBottom="10dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/gia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên sản phẩm"
+            android:textColor="#F63030"
+            android:textSize="10dp"
+            android:layout_marginBottom="10dp"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mô tả sản phẩm"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/motasp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên sản phẩm"
+            android:textColor="#358BB1"
+            android:textSize="10dp"></TextView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/themgiohang"
+        android:layout_width="150dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#CF8C29"
+        android:layout_height="60dp"
+        android:layout_below="@+id/anhsp"
+        android:text="Thêm sản phẩm"
+        ></Button>
+    <Button
+        android:id="@+id/muasanpham"
+        android:layout_width="150dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#CF8C29"
+        android:layout_height="60dp"
+        android:layout_below="@+id/anhsp"
+        android:layout_alignParentEnd="true"
+        android:text="Mua sản phẩm"
+        ></Button>
+</RelativeLayout>

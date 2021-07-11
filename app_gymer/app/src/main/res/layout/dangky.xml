@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo1"
+            android:layout_marginBottom="50dp"
+            />
+        <EditText
+            android:id="@+id/tenkh"
+            android:background="@drawable/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="tên khách hàng"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12dp"
+            />
+        <EditText
+            android:id="@+id/sdt"
+            android:background="@drawable/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="số điện thoại"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline"
+            android:drawablePadding="12dp"
+
+            />
+        <EditText
+            android:id="@+id/email"
+            android:background="@drawable/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="email"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12dp"
+            />
+        <EditText
+            android:id="@+id/matkhau"
+            android:background="@drawable/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="mật khẩu"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline"
+            android:drawablePadding="12dp"
+
+            />
+        <EditText
+            android:id="@+id/matkhau2"
+            android:background="@drawable/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="nhập lại mật khẩu"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline"
+            android:drawablePadding="12dp"
+
+            />
+        <EditText
+            android:id="@+id/chieucao"
+            android:background="@drawable/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="chieucao"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12dp"
+
+            />
+        <EditText
+            android:id="@+id/cannang"
+            android:background="@drawable/custom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="cân nặng"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_marginBottom="30dp"
+            android:padding="5dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12dp"
+
+            />
+        <Button
+            android:id="@+id/themtaikhoan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:textSize="15dp"
+            android:backgroundTint="#000"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

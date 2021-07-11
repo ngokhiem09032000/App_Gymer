@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.app_gymer">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App_gymer">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DangKyActivity"/>
+        <activity android:name=".Exercise_Page"></activity>
+        <activity android:name=".Product_Page"></activity>
+        <activity android:name=".Huong_Dan_tap"></activity>
+        <activity android:name=".Nhac_Luyen_Tap"></activity>
+        <receiver android:name=".AlarmReceiver"></receiver>
+        <service android:name=".Music" android:enabled="true"></service>
+        <activity android:name=".ChiTietSanPham"></activity>
+    </application>
+
+</manifest>
