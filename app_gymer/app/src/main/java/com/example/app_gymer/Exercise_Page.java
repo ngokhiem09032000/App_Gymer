@@ -9,6 +9,7 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,7 @@ public class Exercise_Page extends AppCompatActivity {
     ListView listView;
     ArrayList<BaiTap> loaiBts;
     LoaiBT_Adapter adapter;
+    TextView soluonggiohang;
 
     DrawerLayout drawerLayout;
     @Override
@@ -45,6 +47,10 @@ public class Exercise_Page extends AppCompatActivity {
             int chieucao = (int) getIntent().getSerializableExtra("chieucao");
             TinhBMI(cannang, chieucao);
         }
+
+        setSoluonggiohang();
+
+
         listView = findViewById(R.id.LV_Exercise);
         loaiBts = new ArrayList<>();
         adapter = new LoaiBT_Adapter(this,R.layout.item_bt,loaiBts);
@@ -59,6 +65,12 @@ public class Exercise_Page extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void setSoluonggiohang()
+    {
+        soluonggiohang = findViewById(R.id.soluonggiohang);
+        soluonggiohang.setText("Giỏ hàng"+" ("+GioHangToanCuc.hang.size()+") ");
     }
 
     private void GetData(String url)
@@ -82,7 +94,6 @@ public class Exercise_Page extends AppCompatActivity {
                         }
                         adapter.notifyDataSetChanged();
 
-//                        Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
 
                     }
                 }, new Response.ErrorListener() {
@@ -133,7 +144,10 @@ public class Exercise_Page extends AppCompatActivity {
         activity.startActivity(intent);
 
     }
-
+    public void ClickCart(View view)
+    {
+        redirectActivity(this,GioHang_Page.class);
+    }
     public void ClickLogout(View view)
     {
         logout(this);

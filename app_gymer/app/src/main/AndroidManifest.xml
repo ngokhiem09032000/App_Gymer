@@ -24,6 +24,8 @@
         <receiver android:name=".AlarmReceiver"></receiver>
         <service android:name=".Music" android:enabled="true"></service>
         <activity android:name=".ChiTietSanPham"></activity>
+        <activity android:name=".GioHang_Page"></activity>
+        <activity android:name=".DatHangThanhCong"></activity>
     </application>
 
 </manifest>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th7 11, 2021 lúc 06:54 AM
+-- Thời gian đã tạo: Th7 14, 2021 lúc 05:57 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.3
 
@@ -77,6 +77,25 @@ CREATE TABLE `chitiethoadon` (
   `tongtien` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `chitiethoadon`
+--
+
+INSERT INTO `chitiethoadon` (`mahd`, `masp`, `sl`, `giadagiam`, `tongtien`) VALUES
+(1, 'sp002', 2, 200000, 400000),
+(4, 'sp001', 1, 500000, 500000),
+(4, 'sp002', 1, 200000, 200000),
+(5, 'sp002', 1, 200000, 200000),
+(6, 'sp002', 6, 200000, 1200000),
+(6, 'sp003', 3, 100000, 300000),
+(7, 'sp001', 1, 500000, 500000),
+(7, 'sp003', 2, 100000, 200000),
+(8, 'sp002', 3, 200000, 600000),
+(9, 'sp007', 1, 200000, 200000),
+(10, 'sp006', 6, 150000, 900000),
+(11, 'sp004', 2, 100000, 200000),
+(11, 'sp008', 1, 100000, 100000);
+
 -- --------------------------------------------------------
 
 --
@@ -123,6 +142,23 @@ CREATE TABLE `hoadon` (
   `ngaylap` date NOT NULL,
   `tongtien` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `hoadon`
+--
+
+INSERT INTO `hoadon` (`mahd`, `sdtkh`, `ngaylap`, `tongtien`) VALUES
+(1, '0833123', '2021-06-13', 700000),
+(2, '0833123', '2021-06-13', 400000),
+(3, '0833123', '2021-06-13', 800000),
+(4, '0833123', '2021-06-13', 700000),
+(5, '0833123', '2021-06-13', 200000),
+(6, '0833123', '2021-06-13', 1500000),
+(7, '0833123', '2021-06-13', 700000),
+(8, '0833123', '2021-06-13', 600000),
+(9, '0833123', '2021-06-13', 200000),
+(10, '0833123', '2021-06-13', 900000),
+(11, '0833123', '2021-06-13', 300000);
 
 -- --------------------------------------------------------
 
@@ -236,9 +272,14 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`masp`, `tensp`, `gia`, `slton`, `maloai`, `hinh`, `mota`) VALUES
-('sp001', 'giày tập gym', 500000, 10, 'loai001', 'http://192.168.1.8:8080/img/Giay.jpg', 'giày chạy rất êm và đẹp'),
+('sp001', 'giày tập gym', 500000, 10, 'loai003', 'http://192.168.1.8:8080/img/Giay.jpg', 'giày chạy rất êm và đẹp'),
 ('sp002', 'áo tập gym', 200000, 10, 'loai002', 'http://192.168.1.8:8080/img/Ao.jpg', 'thoáng mát'),
-('sp003', 'quần tập gym', 100000, 10, 'loai002', 'http://192.168.1.8:8080/img/Quan.jpg', 'mỏng, nhẹ và thoải mái');
+('sp003', 'quần tập gym', 100000, 10, 'loai002', 'http://192.168.1.8:8080/img/Quan.jpg', 'mỏng, nhẹ và thoải mái'),
+('sp004', 'dây gym', 100000, 10, 'loai001', 'http://192.168.1.8:8080/img/daygym.jpg', 'chắc chắn, Chất liều bền'),
+('sp005', 'Máy chạy bộ', 10000000, 2, 'loai002', 'http://192.168.1.8:8080/img/maychaybo.jpg', 'chắc chắn, Chất liều bền'),
+('sp006', 'Găng tay', 150000, 10, 'loai001', 'http://192.168.1.8:8080/img/baytay.jpg', 'chắc chắn, Chất liều bền'),
+('sp007', 'Cặp tạ', 200000, 10, 'loai001', 'http://192.168.1.8:8080/img/capta.jpg', 'chắc chắn, Chất liều bền'),
+('sp008', 'dây nhảy', 100000, 10, 'loai003', 'http://192.168.1.8:8080/img/daynhay.jpg', 'chắc chắn, Chất liều bền');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -315,13 +356,13 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT cho bảng `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `mahd` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `mahd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `quangcao`
 --
 ALTER TABLE `quangcao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

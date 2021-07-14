@@ -4,7 +4,7 @@
     android:layout_height="120dp">
     <ImageView
         android:id="@+id/anh"
-        android:layout_width="60dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:background="@color/black"
         android:layout_margin="10dp"
@@ -47,12 +47,13 @@
     <Spinner
         android:id="@+id/spnSoluong"
         android:layout_gravity="center_horizontal"
-        android:layout_width="60dp"
+        android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_toRightOf="@+id/tensp"
+        android:layout_toRightOf="@+id/soluong"
         android:layout_marginTop="85dp"
         />
     <ImageButton
+        android:id="@+id/delete"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/ic_baseline_delete_24"

@@ -8,7 +8,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
         app:titleTextColor="#000"
-        android:background="#CF8C29"
+        android:background="#91E431"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
         <Button
@@ -92,25 +92,40 @@
             android:layout_height="wrap_content"
             android:text="Tên sản phẩm"
             android:textColor="#358BB1"
-            android:textSize="10dp"></TextView>
+            android:textSize="10dp"
+            android:layout_marginBottom="10dp"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"
+                ></TextView>
+            <Spinner
+                android:id="@+id/spnSoluong"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="18dp"
+                />
+        </LinearLayout>
+
     </LinearLayout>
     <Button
         android:id="@+id/themgiohang"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_margin="10dp"
-        android:backgroundTint="#CF8C29"
-        android:layout_height="60dp"
-        android:layout_below="@+id/anhsp"
-        android:text="Thêm sản phẩm"
-        ></Button>
-    <Button
-        android:id="@+id/muasanpham"
-        android:layout_width="150dp"
-        android:layout_margin="10dp"
-        android:backgroundTint="#CF8C29"
+        android:backgroundTint="#91E431"
         android:layout_height="60dp"
         android:layout_below="@+id/anhsp"
         android:layout_alignParentEnd="true"
-        android:text="Mua sản phẩm"
+        android:text="Thêm sản phẩm"
         ></Button>
+
 </RelativeLayout>

@@ -20,6 +20,27 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             ></ViewFlipper>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Loại sản phẩm"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginRight="20dp"
+                ></TextView>
+            <Spinner
+                android:id="@+id/loaisp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
         <ListView
             android:id="@+id/LV_Product"
             android:layout_width="match_parent"

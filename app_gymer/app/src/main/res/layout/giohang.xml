@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/drawer_layout3"
     >
     <LinearLayout
         android:orientation="vertical"
@@ -15,11 +15,49 @@
             android:id="@+id/toolbar"
             >
         </include>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GIỎ HÀNG"
+            android:textColor="#5A8C1F"
+            android:layout_below="@+id/toolbar1"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            ></TextView>
         <ListView
             android:id="@+id/LV_Cart"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="500dp"
             ></ListView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng tiền:"
+                android:textSize="30dp"
+                android:textColor="@color/black"></TextView>
+            <TextView
+                android:id="@+id/tongtien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30dp"
+                android:textColor="#EC2F2F"></TextView>
+        </LinearLayout>
+        <Button
+            android:id="@+id/dathang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ĐẶT HÀNG"
+            android:textSize="40dp"
+            android:backgroundTint="#80B83F"
+            ></Button>
     </LinearLayout>
 
     <RelativeLayout

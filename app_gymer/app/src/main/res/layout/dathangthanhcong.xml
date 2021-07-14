@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/ic_baseline_check_circle_outline_24"
+        ></ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Đặt hàng thành công. Chúng tôi sẽ liên hệ bạn sau."
+        android:textSize="30dp"
+        android:textColor="#91ED25"
+        android:gravity="center"
+        >
+    </TextView>
+    <Button
+        android:id="@+id/muatiep1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#92EC2A"
+        android:text="Tiếp tục mua hàng"
+        android:textSize="30dp"
+        ></Button>
+
+</LinearLayout>

@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
     EditText TenDN;
     EditText Matkhau;
     String url = "http://192.168.1.8:8080/test/get_Login.php";
+    String urlQuangCao ="http://192.168.1.8:8080/test/getQuangCao.php";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dangnhap);
         TenDN = findViewById(R.id.TenDN);
         Matkhau = findViewById(R.id.MatKhau);
+        GetQuangCao(urlQuangCao);
         chuyenTrang2(url);
         chuyenTrang();
 
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                                 if(jsonObject.getString("sdt").equals( TenDN.getText().toString())
                                         && jsonObject.getString("matkhau").equals(Matkhau.getText().toString()))
                                 {
+                                    GioHangToanCuc.Sdtkh = jsonObject.getString("sdt");
                                     Login_Success(jsonObject.getInt("cannang"),jsonObject.getInt("chieucao"));
                                     return;
                                 }
@@ -108,6 +111,32 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    private void GetQuangCao(String url)
+    {
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        for(int i = 0; i<response.length();i++)
+                        {
+                            try {
+                                JSONObject jsonObject = response.getJSONObject(i);
+                                GioHangToanCuc.quangCao_list.add(
+                                        jsonObject.getString("hinhquangcao")
+                                );
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, "Loi", Toast.LENGTH_SHORT).show();
+            }
+        });
+        requestQueue.add(jsonArrayRequest);
+    }
 
 }

@@ -23,7 +23,7 @@ import java.util.Calendar;
 
 public class Nhac_Luyen_Tap extends AppCompatActivity {
     TimePicker timePicker;
-    Button hengio,tathen;
+    Button hengio,tathen,quayve;
     TextView thoigian;
     Calendar calendar;
     AlarmManager alarmManager;
@@ -66,6 +66,13 @@ public class Nhac_Luyen_Tap extends AppCompatActivity {
             }
 
         });
+        quayve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Nhac_Luyen_Tap.this,Product_Page.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @SuppressLint("ServiceCast")
@@ -77,5 +84,6 @@ public class Nhac_Luyen_Tap extends AppCompatActivity {
         thoigian = findViewById(R.id.thoigian);
         calendar = Calendar.getInstance();
         alarmManager= (AlarmManager) getSystemService(ALARM_SERVICE);
+        quayve = (Button) findViewById(R.id.quaylai3);
     }
 }
